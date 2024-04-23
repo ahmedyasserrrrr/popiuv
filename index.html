@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> <!-- إضافة ملف الجافا سكريبت للتبديل بين القوائم -->
+
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <style>
+ @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Changa&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+        body{
+            font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:  "slnt" 0;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #0A284E;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidenav a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #fff;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            left: 25px;
+            font-size: 36px;
+            margin-right: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+
+        .nav-icons {
+            display: none; /* يتم إخفاء الأيقونة في البداية */
+        }
+
+        .nav-icons.active {
+            display: block; /* عرض الأيقونة عند النقر عليها */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-white bg-white shadow-sm fixed ">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" style="  color: #0A284E;"  onclick="redirectToPath()" >الرئيسيه</a>
+            <button class="navbar-toggler "  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <img class="navbar-toggler-icon " src="images/menu.png" alt="">
+            </button>
+            <div class="collapse navbar-collapse   " id="navbarNav">
+                <ul class="navbar-nav clas me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="قصتنا.html" onclick="redirectToPath()"    style=" color: #0A284E;" >قصتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"  onclick="redirectToPath()"  style=" color: #0A284E;" >تحدث مع الفريق</a>
+    
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"  onclick="redirectToPath()"  style=" color: #0A284E;" >الاراء</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="test.html" onclick="redirectToPath()" tabindex="-1" aria-disabled="true"    style=" color: #0A284E;" >الدعم الفني</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="https://ahmedyasserrrrr.github.io/popiu/mm" onclick="redirectToPath()" tabindex="-1" aria-disabled="true"    style=" color: #0A284E;" > منتجاتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="soon.html" tabindex="-1" aria-disabled="true     "  onclick="redirectToPath()" style=" color: #0A284E;" >انضم الينا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<style>
+    .clas{
+        margin-inline-start: auto;
+    }
+
+    @media (max-width: 768px) {
+    .row {
+        flex-direction: row; /* تغيير توجيه الصف ليكون أفقيًا */
+        flex-wrap: wrap; /* السماح بالتفاف العناصر عندما يكون العرض ضيقًا */
+        justify-content: space-between; /* توزيع العناصر بالتساوي على طول الصف */
+    }
+
+    .col-md-2 {
+        width: calc(50% - 10px); /* جعل عرض العمود 50% مع تحديد التباعد بين العمودين */
+        margin-bottom: 20px; /* تباعد بين البطاقات */
+    }
+}
+</style>
+
+<div class="sidenav">
+    <a href="#"   onclick="redirectToPath()"  class="closebtn">&times;</a>
+    <a href="index.html"  onclick="redirectToPath()" >الرئيسية</a>
+    <a href="قصتنا.html"  onclick="redirectToPath()" > قصتنا</a>
+    <a href="#"  onclick="redirectToPath()" >تحدث مع الفريق</a>
+    <a href="# "  onclick="redirectToPath()" >الاراء</a>
+    <a href="test.html"  onclick="redirectToPath()" >الدعم الفني</a>
+    <a href="https://ahmedyasserrrrr.github.io/popiu/mm"  onclick="redirectToPath()" > منتجاتنا</a>
+    <a href="soon.html"  onclick="redirectToPath()" >انضم الينا</a>
+</div>
+
+
+
+<div class="container">
+
+    <!-- Outer Row -->
+    <div class="row">
+
+      <div class="col-md-6 text-center m-auto py-4  ">
+
+        <img src="images/develop-web (1).gif" width="350" class="text-  image-filter " alt="">
+          <div class="p-2">
+
+          </div>
+       
+      </div>
+      <div class="col-md-6 text-center m-auto py-3  " style="color: #0A284E;" >
+
+       <h2> شركه الرئيسيه </h2>
+       <p>   
+        شركه الرئيسيه للحلول المبتكره والخدمات الالكترونيه تقدم لكم اقوي الحلول والخدمات
+    </p>
+                   <a class="btn btn- bb btn-lg  text-decoration-none  " href="قصتنا.html"  style="background-color: #0A284E; color: #fff;" >قصتنا</a>
+            <a class="btn btn- bb btn-lg" style="background-color: #0A284E; color: #fff;" href="https://ahmedyasserrrrr.github.io/popiu/mm" >خدماتنا</a>
+       
+      </div>
+
+    </div>
+
+
+    <div class="row p-2">
+        <div class="col-md-2 col-sm-4  ">
+            <div class="card shadow p-3 rounded-5 ">
+                <img src="images/web-design.png" width="60" class="text-center m-auto" alt="">
+                <p class="m-auto" >جرافيك</p>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-4  ">
+            <div class="card shadow p-3 rounded-5 ">
+                <img src="images/social-media.png" width="60" class="text-center m-auto" alt="">
+                <p class="m-auto" >تسويق الكتروني</p>
+            </div>
+        </div>
+        <div class="col-md-2  col-sm-4 ">
+            <div class="card shadow p-3 rounded-5 ">
+                <img src="images/resume.png" style="color: #0A284E;" width="60" class="text-center m-auto" alt="">
+                <p class="m-auto" >اداره مشاريع</p>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-4">
+            <div class="card shadow p-3 rounded-5 ">
+                <img src="images/mobile-app.png" width="60" class="text-center m-auto" alt="">
+                <p class="m-auto" >تطبيقات </p>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-4">
+            <div class="card shadow p-3 rounded-5 ">
+                <img src="images/shopping-cart.png" style="color: #0A284E;" width="60" class="text-center m-auto" alt="">
+                <p class="m-auto" >مواقع جاهزه</p>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-4">
+            <div class="card shadow p-3 rounded-5 ">
+                <img src="images/ux.png" width="60" class="text-center m-auto" alt="">
+                <p class="m-auto" >مواقع الكترونيه</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row p-5">
+        <div class="col-md-6 mb-2">
+            <img src="images/endingbrowsing.gif" width="400" alt="">
+        </div>
+        <div class="col-md-6 p-2">
+                <p>
+                    "في الرئيسية لتقنية المعلومات، نقدم حلولًا برمجية مبتكرة ومتطورة تلبي احتياجات عملائنا بكفاءة واحترافية. كشركة متخصصة في تقديم خدمات تطوير البرمجيات وإدارة المشاريع، نسعى جاهدين لتحقيق تطلعاتكم وأهدافكم التقنية بأعلى مستويات الجودة والكفاءة.مع فريق من المطورين المحترفين والمتخصصين في مجالات عدة، نقوم بتصميم وتطوير مواقع الويب الجذابة، وتطبيقات الجوال المبتكرة، وأنظمة البرمجيات المخصصة لتلبية احتياجات عملكم بشكل مثالي. بالإضافة إلى ذلك، نقدم خدمات تصحيح المشاكل البرمجية بكفاءة عالية، وربط المواقع والتطبيقات بمختلف بوابات الدفع لتسهيل عمليات التحصيل والدفع.سواء كنت تبحث عن حلول برمجية مخصصة أو تطوير مشروعك التقني، فإننا هنا لنوفر لكم التكنولوجيا التي تحتاجونها للنجاح. اكتشف معنا عالمًا من الابتكار والتميز التقني، واترك لنا مساعدتك في تحويل أفكارك إلى واقع رقمي مبهر."
+
+                </p>
+        </div>
+    </div>
+    <div class="row p-5">
+        <div class="col-md-6 mb-2">
+            <img src="images/test.gif" width="400" alt=""> 
+        </div>
+        <div class="col-md-6 p-2">
+                <p>
+                    "في الرئيسية لتقنية المعلومات، نقدم حلولًا برمجية مبتكرة ومتطورة تلبي احتياجات عملائنا بكفاءة واحترافية. كشركة متخصصة في تقديم خدمات تطوير البرمجيات وإدارة المشاريع، نسعى جاهدين لتحقيق تطلعاتكم وأهدافكم التقنية بأعلى مستويات الجودة والكفاءة.مع فريق من المطورين المحترفين والمتخصصين في مجالات عدة، نقوم بتصميم وتطوير مواقع الويب الجذابة، وتطبيقات الجوال المبتكرة، وأنظمة البرمجيات المخصصة لتلبية احتياجات عملكم بشكل مثالي. بالإضافة إلى ذلك، نقدم خدمات تصحيح المشاكل البرمجية بكفاءة عالية، وربط المواقع والتطبيقات بمختلف بوابات الدفع لتسهيل عمليات التحصيل والدفع.سواء كنت تبحث عن حلول برمجية مخصصة أو تطوير مشروعك التقني، فإننا هنا لنوفر لكم التكنولوجيا التي تحتاجونها للنجاح. اكتشف معنا عالمًا من الابتكار والتميز التقني، واترك لنا مساعدتك في تحويل أفكارك إلى واقع رقمي مبهر."
+
+                </p>
+        </div>
+    </div>
+
+    <div class="row  p-5">
+        <div class="col-md-6 mb-2">
+            <img src="images/contract.gif" width="300" alt="">
+        </div>
+        <br>
+        <div class="col-md-6 p-2" style="text-align: center;">
+            <h1>هل انت عميل جديد..؟</h1>
+                <span class="" style="text-align: center; " >
+                  يمكنك بدأ رحلتك في نجاح مشروعك
+                </span>
+                <div class="m-auto p-5 ">
+                    <a class="btn btn-  bb btn-lg  " href="https://docs.google.com/forms/d/e/1FAIpQLSfg-jpKdSOY1CSChJUY-OjgrK1TnhVObXynh6-cJ442X7kEQQ/viewform"  style="background-color: #0A284E; color: #fff;" >البدأ الان</a>
+                    <a class="btn btn- bb btn-lg" href="test.html" style="background-color: #0A284E; color: #fff;" >تواصل معنا</a>
+
+                </div>
+        </div>
+    </div>
+    
+    <div id="initialCard" class="card d-none d-sm-inline shadow" style="background-color: #0A284E; color: #fff;">
+        <div class="card-body">
+            <div class="rounded-5 center">
+                <img src="images/icon-cute.gif" width="120" class="m-auto" alt="">
+                <h4>هل تبحث عن شئ معين</h4>
+                <p>انتقل الى الحل البسيط</p>
+            </div>
+            <div class="d-grid">
+                <a id="button1" class="btn text-decoration-none btn btn-outline-white bb" href="transiton.html">انتقال</a>
+                <button id="button2" class="btn btn-outline-white bb">لا شكرا</button>
+            </div>
+        </div>
+    </div>
+    
+
+
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" style="text-align: center;">
+                    <h5 style="text-align: center;">روابط سريعة</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">الصفحة الرئيسية</a></li>
+                        <li><a href="#">الخدمات</a></li>
+                        <li><a href="#">من نحن</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4" style="text-align: center;">
+                    <h5 style="text-align: center;">تواصل معنا</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">whatsapp</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 style="text-align: center;" >وسائل الدفع</h5>
+                    <ul class="list-unstyled payment-icons">
+                        <li><img src="images/تنزيل (1).png" alt="Visa"></li>
+                        <li><img src="images/241ca67a-cb85-425e-86d5-5609bba60e39.webp" alt="Mastercard"></li>
+                        <li><img src="images/974644c3-4925-489a-bc0a-b94f882b0c16.webp" alt="Paypal"></li>
+                        <li><img src="images/تنزيل.png" alt="American Express"></li>
+                     
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .footer {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.footer .payment-icons {
+    display: flex;
+    justify-content: center; /* لوضع العناصر في الوسط أفقيًا */
+    align-items: center; /* لوضع العناصر في الوسط عموديًا */
+}
+
+.footer .payment-icons img {
+    width: 50px; /* تعيين حجم الصور حسب الحاجة */
+    margin: 0 10px; /* تعيين هامش بين الصور */
+}
+
+.footer h5 {
+    color: #333;
+}
+
+.footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #666;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    color: #000;
+}
+    </style>
+
+    <style>
+        /* CSS for hiding the element on small screens */
+@media (max-width: 576px) {
+    #initialCard {
+        display: none;
+    }
+}
+
+        .center{
+            text-align: center;
+            margin: auto;
+        }
+        
+        .bb {
+            background-color: #fff;
+            color: #0A284E;
+            
+    padding: 10px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 15px;
+    transition: background-color 0.3s ease;
+}
+  
+
+.bb:hover {
+    background-color: white;
+    color: #0A284E;
+}
+
+        .d-grid{
+            display: grid;
+            color: #fff;
+        }
+        .d-none {
+    display: none !important;
+}
+#initialCard {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 15px;
+}
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        document.getElementById('initialCard').classList.remove('d-none');
+    }, 10000); // تأخير الظهور لمدة 7 ثواني
+});
+
+document.getElementById('button2').addEventListener('click', function() {
+        // إخفاء الكارد
+        document.getElementById('initialCard').classList.add('d-none');
+    });
+    </script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> <!-- إضافة ملف الجافا سكريبت للتبديل بين القوائم -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sidenav = document.querySelector('.sidenav');
+        const navIcons = document.querySelector('.navbar-toggler');
+        const closeBtn = document.querySelector('.closebtn');
+
+        // فتح القائمة الجانبية
+        navIcons.addEventListener('click', function() {
+            sidenav.style.width = '250px';
+        });
+
+        // إغلاق القائمة الجانبية
+        closeBtn.addEventListener('click', function() {
+            sidenav.style.width = '0';
+        });
+    });
+</script>
+
+
+<style>
+ 
+    
+    .nav-container {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #0A284E;
+        border-radius: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+    
+    .nav-item {
+        color: #fff;
+        font-size: 16px;
+        text-decoration: none;
+        padding: 12px 24px;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    
+    .nav-item:hover {
+        background-color: orange;
+    }
+
+    .nav-item i {
+        margin-right: 8px;
+    }
+
+    .close-btn {
+        display: none;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .nav-item {
+            padding: 10px 20px;
+        }
+
+        .close-btn {
+            display: inline-block;
+            float: right;
+            padding: 10px;
+            cursor: pointer;
+        }
+    }
+</style>
+
+<div class="nav-container">
+    <span class="close-btn text-white " onclick="closeNav()"><i class="fas fa-times"></i></span>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfg-jpKdSOY1CSChJUY-OjgrK1TnhVObXynh6-cJ442X7kEQQ/viewform" class="nav-item text-decoration-none ">  Order <i class="fas fa-tasks"></i></a>
+    <a href="#" class="nav-item text-decoration-none text-warning"> Home <i class="fas fa-home"></i> </a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxtcgGcNpEu-NZ26dIpBSVwwM_rBYUixtN_CSSN-AT3dOogQ/viewform" class="nav-item text-decoration-none">Meeting <i class="fas fa-user"></i>  </a>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<script>
+    function closeNav() {
+        document.querySelector(".nav-container").style.display = "none";
+    }
+</script>
+
+
+</body>
+</html>

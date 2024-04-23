@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> <!-- إضافة ملف الجافا سكريبت للتبديل بين القوائم -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Changa&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+   
+           body{
+               font-family: "Cairo", sans-serif;
+     font-optical-sizing: auto;
+     font-style: normal;
+     font-variation-settings:  "slnt" 0;
+           }
+   
+           .sidenav {
+               height: 100%;
+               width: 0;
+               position: fixed;
+               z-index: 1;
+               top: 0;
+               left: 0;
+               background-color: #0A284E;
+               overflow-x: hidden;
+               transition: 0.5s;
+               padding-top: 60px;
+               box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+           }
+   
+           .sidenav a {
+               padding: 10px 15px;
+               text-decoration: none;
+               font-size: 18px;
+               color: #fff;
+               display: block;
+               transition: 0.3s;
+           }
+   
+           .sidenav a:hover {
+               color: #fff;
+           }
+   
+           .sidenav .closebtn {
+               position: absolute;
+               top: 0;
+               left: 25px;
+               font-size: 36px;
+               margin-right: 50px;
+           }
+   
+           @media screen and (max-height: 450px) {
+               .sidenav {padding-top: 15px;}
+               .sidenav a {font-size: 18px;}
+           }
+   
+           .nav-icons {
+               display: none; /* يتم إخفاء الأيقونة في البداية */
+           }
+   
+           .nav-icons.active {
+               display: block; /* عرض الأيقونة عند النقر عليها */
+               cursor: pointer;
+           }
+       </style>
+  
+
+</head>
+<body class="bg-se" >
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Changa&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+       
+               body{
+                   font-family: "Cairo", sans-serif;
+         font-optical-sizing: auto;
+         font-style: normal;
+         font-variation-settings:  "slnt" 0;
+               }
+       
+               .sidenav {
+                   height: 100%;
+                   width: 0;
+                   position: fixed;
+                   z-index: 1;
+                   top: 0;
+                   left: 0;
+                   background-color: #0A284E;
+                   overflow-x: hidden;
+                   transition: 0.5s;
+                   padding-top: 60px;
+                   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+               }
+       
+               .sidenav a {
+                   padding: 10px 15px;
+                   text-decoration: none;
+                   font-size: 18px;
+                   color: #fff;
+                   display: block;
+                   transition: 0.3s;
+               }
+       
+               .sidenav a:hover {
+                   color: #fff;
+               }
+       
+               .sidenav .closebtn {
+                   position: absolute;
+                   top: 0;
+                   left: 25px;
+                   font-size: 36px;
+                   margin-right: 50px;
+               }
+       
+               @media screen and (max-height: 450px) {
+                   .sidenav {padding-top: 15px;}
+                   .sidenav a {font-size: 18px;}
+               }
+       
+               .nav-icons {
+                   display: none; /* يتم إخفاء الأيقونة في البداية */
+               }
+       
+               .nav-icons.active {
+                   display: block; /* عرض الأيقونة عند النقر عليها */
+                   cursor: pointer;
+               }
+           </style>
+    <nav class="navbar navbar-expand-md navbar-white bg-white shadow-sm fixed ">
+        <div class="container">
+            <a class="navbar-brand" href="test.html" style="  color: #0A284E;"  onclick="redirectToPath()" >الرئيسيه</a>
+            <button class="navbar-toggler "  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <img class="navbar-toggler-icon " src="images/menu.png" alt="">
+            </button>
+            <div class="collapse navbar-collapse   " id="navbarNav">
+                <ul class="navbar-nav clas me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" onclick="redirectToPath()"    style=" color: #0A284E;" >قصتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"  onclick="redirectToPath()"  style=" color: #0A284E;" >تحدث مع الفريق</a>
+    
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"  onclick="redirectToPath()"  style=" color: #0A284E;" >الاراء</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="test.html" onclick="redirectToPath()" tabindex="-1" aria-disabled="true"    style=" color: #0A284E;" >الدعم الفني</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#" tabindex="-1" aria-disabled="true     "  onclick="redirectToPath()" style=" color: #0A284E;" >انضم الينا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <style>
+        .clas{
+            margin-inline-start: auto;
+        }
+    
+        @media (max-width: 768px) {
+        .row {
+            flex-direction: row; /* تغيير توجيه الصف ليكون أفقيًا */
+            flex-wrap: wrap; /* السماح بالتفاف العناصر عندما يكون العرض ضيقًا */
+            justify-content: space-between; /* توزيع العناصر بالتساوي على طول الصف */
+        }
+    
+        .col-md-2 {
+            width: calc(50% - 10px); /* جعل عرض العمود 50% مع تحديد التباعد بين العمودين */
+            margin-bottom: 20px; /* تباعد بين البطاقات */
+        }
+    }
+    </style>
+    
+    <div class="sidenav">
+        <a href="#"   onclick="redirectToPath()"  class="closebtn">&times;</a>
+        <a href="#"  onclick="redirectToPath()" >الرئيسية</a>
+        <a href="#"  onclick="redirectToPath()" > قصتنا</a>
+        <a href="#"  onclick="redirectToPath()" >تحدث مع الفريق</a>
+        <a href="# "  onclick="redirectToPath()" >الاراء</a>
+        <a href="#"  onclick="redirectToPath()" >الدعم الفني</a>
+        <a href="#"  onclick="redirectToPath()" >انضم الينا</a>
+    </div>
+
+    <style>
+            .bb {
+            background-color: #fff;
+            color: #0A284E;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 7px;
+    transition: background-color 0.3s ease;
+}
+  
+
+.bb:hover {
+    background-color: white;
+    color: #0A284E;
+}
+    </style>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="text-align: center; margin-top: 80px; "  >
+                <img src="images/test-gadgets.gif" width="320px"   alt="">
+
+ 
+                </div>
+                 
+
+            </div>
+        </div>
+
+    
+            <div class="col-md-12">
+                <span class="text-danger" style="float: right;  "    >البداية:</span>
+                <br>
+                <p>
+                    كانت فكرة إنشاء الرئيسية تنطلق من إيمان عميق بقدرة التكنولوجيا على تحويل العالم وتسهيل حياتنا. ومع تجربة الرئيسية في مجال تطوير البرمجيات وإدارة المشاريع، بدأ يرى الفرص الكبيرة التي يمكن أن تفتحها الابتكارات التقنية في مختلف المجالات.
+
+
+                </p>
+            </div>
+            <div class="col-md-12">
+                <span class="text-danger" style="marker-start:auto ; float: right; "  >تجميع الفريق:</span>
+                <br>
+                <p>
+                    لم يكن فرد واحد فقط وحده في هذه الرحلة، بل جمع فريقًا من الخبراء والمبتكرين الذين يشتركون في رؤيته ويؤمنون بقدرتهم على تحقيق التغيير. كانت تلك اللحظة هي بداية تكوين الفريق الذي يجمع بين الإبداع والتميز الفني.
+
+                </p>
+            </div>
+            <div class="col-md-12">
+                <span class="text-danger" style="marker-start:auto ; float: right; "  >بداية الشركة:</span>
+                <br>
+                <p>
+                    في عام 2022، تم تأسيس شركة الرئيسية للحلول التقنية رسميًا، وهو خطوة كبيرة نحو تحقيق الرؤية الأصلية. بدأت الشركة في تقديم حلول برمجية مبتكرة في مجالات متعددة، بما في ذلك تطوير المواقع، وإنشاء التطبيقات، وإدارة المشاريع التقنية.
+
+                </p>
+            </div>
+            <div class="col-md-12">
+                <span class="text-danger" style="marker-start:auto ;  float: right; "  > النمو والتطور:</span>
+                <br>
+                <p>
+                    مع مرور الوقت، شهدت الشركة نموًا ملحوظًا وتطورات مستمرة، حيث استقطبت مجموعة متنوعة من العملاء ونالت ثقتهم بفضل جودة الخدمات والابتكار في الحلول المقدمة. كما توسعت الخدمات المقدمة لتشمل مجالات جديدة وتقنيات متطورة.
+
+                </p>
+            </div>
+            <div class="col-md-12" style="margin-left: auto; ">
+                <span class="text-danger ms " style="float: right;" > الختام:</span>
+                <br>
+                <p>
+                    بهذه الروح الإبداعية والتفاني الشديد، يستمر فريق الرئيسية في بناء مستقبل واعد مليء بالابتكار والتطورات التقنية، مع إلتزام دائم بتقديم أفضل الخدمات والحلول لعملائنا وشركائنا، لنبقى دائمًا في صدارة التحول الرقمي وتحقيق النجاح المشترك.
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidenav = document.querySelector('.sidenav');
+            const navIcons = document.querySelector('.navbar-toggler');
+            const closeBtn = document.querySelector('.closebtn');
+    
+            // فتح القائمة الجانبية
+            navIcons.addEventListener('click', function() {
+                sidenav.style.width = '250px';
+            });
+    
+            // إغلاق القائمة الجانبية
+            closeBtn.addEventListener('click', function() {
+                sidenav.style.width = '0';
+            });
+        });
+    </script>
+
+
+<div class="loading-icon" id="loadingIcon"><img src="images/wait-stephen-stotch.gif" width="70px" alt="">  ....wait </div>
+
+
+
+
+<style>
+    .loading-icon {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }
+    .loading-icon i {
+        font-size: 50px;
+        color: #000;
+    }
+    .active {
+        display: inline-block;
+        margin-left: 5px;
+    }
+</style>
+
+</body>
+</html>

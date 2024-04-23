@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading Icon</title>
+<style>
+    .loading-icon {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }
+    .loading-icon i {
+        font-size: 50px;
+        color: #000;
+    }
+    .active {
+        display: inline-block;
+        margin-left: 5px;
+    }
+</style>
+</head>
+<body>
+
+<button class="btn btn-primary" onclick="redirectToPath()">تحميل</button>
+
+
+<div class="loading-icon" id="loadingIcon"><img src="images/wait-stephen-stotch.gif" width="70px" alt="">  ....wait </div>
+
+<script>
+function redirectToPath() {
+    var loadingIcon = document.getElementById("loadingIcon");
+
+    // إظهار أيقونة التحميل
+    loadingIcon.style.display = "block";
+
+    // انتظر 3 ثواني ثم قم بتحويل المستخدم إلى المسار المستهدف
+    setTimeout(function() {
+        // تحويل المستخدم إلى المسار المستهدف أو يمكنك تعديلها حسب الحاجة
+        window.location.href = "المسار_المستهدف";
+    }, 3000);
+}
+</script>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</body>
+</html>
